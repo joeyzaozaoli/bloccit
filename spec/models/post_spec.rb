@@ -74,4 +74,10 @@ RSpec.describe Post, type: :model do
       end
     end
   end
+
+  describe "#create_vote" do
+    it "creates an upvote upon a posted created" do
+      expect( post.up_votes ).to eq(1)
+    end
+  end
 end
